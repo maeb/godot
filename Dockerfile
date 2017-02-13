@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM frolvlad/alpine-glibc
 
 MAINTAINER Marius André Elsfjordstrand Beck <skaterase@gmail.com>
 
