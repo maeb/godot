@@ -1,0 +1,16 @@
+stages:
+  - build
+
+build:linux:
+  stage: build
+  script:
+    - godot -path <path to engine.cfg> -export_debug "Linux X11" game
+  only:
+    - master
+
+build:windows:
+  stage: build
+  script:
+    - godot -path <path to engine.cfg> -export_debug "Windows Desktop" game.exe
+  only:
+    - master
