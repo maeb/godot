@@ -7,7 +7,7 @@ The ```Vagrantfile``` provides Docker and Gitlab Runner. It can be used to test 
 
     $ gitlab-runner exec docker <job name>
 
-    No need to register the runner first.
+No need to register the runner first.
 
-    ### Credits
-    Rafał Zawadzki: https://hub.docker.com/r/bluszcz/godot/
+### Credits
+Rafał Zawadzki: https://hub.docker.com/r/bluszcz/godot/
