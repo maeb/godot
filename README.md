@@ -1,13 +1,19 @@
-# Continuous integration with Godot Engine
-## Automate Godot Engine builds using Docker, Vagrant and Gitlab CI
+# Minimal Godot Engine Docker image
 
-The ```Dockerfile``` is the source of the automated build at  https://hub.docker.com/r/skaterase/godot/.
+This image is based on a minimal Alpine Linux image that includes glibc. It provides the official Linux server 64-bit 2.1.2-stable build of Godot Engine along with the official templates.
 
-The ```Vagrantfile``` provides Docker and Gitlab Runner. It can be used to test the Gitlab CI configuration (see ```.gitlab-ci.yml```):
+The primary application is for automating Godot Engine builds.
+
+Godot Engine is located at ```/bin/godot`` and the templates are installed in ```/root/.godot/templates```.
+
+## Usage example (Gitlab CI)
+
+The source repository contains a ```Vagrantfile``` who provides Docker and Gitlab Runner. It can be used to test Gitlab CI configuration (see ```.gitlab-ci.yml``` in the source repository for an example configuration):
 
     $ gitlab-runner exec docker <job name>
 
-No need to register the runner first.
+There is no need to register the runner first.
 
-### Credits
+## Credits
+
 Rafał Zawadzki: https://hub.docker.com/r/bluszcz/godot/
